@@ -10,6 +10,7 @@ import chat from "/public/assests/images/chat.jpg";
 import algorithms from "/public/assests/images/algorithums.jpg";
 import profile from "/public/assests/images/rich-profile.jpg";
 import clock from "/public/assests/images/clock.png";
+import Link from "next/link";
 const About = () => {
   return (
     <div className={"w-full   pt-20     bg-[black]"} id="about">
@@ -28,12 +29,11 @@ const About = () => {
           </h1>
 
           <div className="flex justify-center">
-            <a
-              href="#_"
-              className="inline-flex items-center hover:scale-110 transition-all duration-500  bg-[white]  justify-center h-12 px-6 py-6 text-sm font-semibold text-center  no-underline align-middle transition-all duration-300 ease-in-out    rounded-full cursor-pointer select-none hover:text-black hover:border-black text-black border-solid border-2 border-black focus:shadow-xs focus:no-underline"
-            >
-              Find Your Match
-            </a>
+            <Link href="/componets/events">
+              <button className="inline-flex items-center hover:scale-110 transition-all duration-500 bg-[white] justify-center h-12 px-6 py-6 text-sm font-semibold text-center no-underline align-middle transition-all duration-300 ease-in-out rounded-full cursor-pointer select-none hover:text-black hover:border-black text-black border-solid border-2 border-black focus:shadow-xs focus:no-underline">
+                Open Event Page
+              </button>
+            </Link>
           </div>
         </div>
         <div className="bg-white container mx-auto flex   md:flex-row flex-col items-center justify-center">

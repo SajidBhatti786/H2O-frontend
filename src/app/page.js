@@ -11,8 +11,7 @@ import { useAuth } from "./context/AuthContext";
 import Data from "@/app/componets/data/Data";
 
 export default function Home() {
-
-   // Logic For Login Or Registration
+  // Logic For Login Or Registration
   // const router = useRouter();
   // const { setIsLoggedIn, isLoggedIn, login, logout } = useAuth();
   //
@@ -28,7 +27,6 @@ export default function Home() {
 
   return (
     <>
-      <Header />
       <Hero />
       <About />
       <Connection />

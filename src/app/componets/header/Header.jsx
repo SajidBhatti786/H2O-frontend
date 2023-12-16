@@ -43,7 +43,7 @@ const Header = () => {
         </div>
         <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center  lg:w-auto lg:space-x-6">
           <li>
-            <Link className="text-sm text-white hover:font-bold" href="home">
+            <Link className="text-sm text-white hover:font-bold" href="/#home">
               Home
             </Link>
           </li>
@@ -64,7 +64,7 @@ const Header = () => {
             </svg>
           </li>
           <li>
-            <Link className="text-sm text-white hover:font-bold" href="#about">
+            <Link className="text-sm text-white hover:font-bold" href="/#about">
               About Us
             </Link>
           </li>
@@ -87,7 +87,7 @@ const Header = () => {
           <li>
             <Link
               className="text-sm text-white hover:font-bold"
-              href="#service"
+              href="/#service"
             >
               Services
             </Link>
@@ -109,7 +109,7 @@ const Header = () => {
             </svg>
           </li>
           <li>
-            <Link className="text-sm text-white hover:font-bold" href="#price">
+            <Link className="text-sm text-white hover:font-bold" href="/#price">
               Pricing
             </Link>
           </li>
@@ -130,7 +130,7 @@ const Header = () => {
             </svg>
           </li>
           <li>
-            <a className="text-sm text-white hover:font-bold" href="#contact">
+            <a className="text-sm text-white hover:font-bold" href="/#contact">
               Contact
             </a>
           </li>
@@ -156,7 +156,7 @@ const Header = () => {
           <nav className="fixed top-0 left-0 bg-[#2a112a] bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6  border-r overflow-y-auto">
             {/* ... Menu Content ... */}
             <div className="flex items-center mb-8">
-              <a href="/#" className="block w-full py-5">
+              <a href="/" className="block w-full py-5">
                 <span>
                   <Image src={Logo} width={60} height={60} alt="logo" />
                 </span>
@@ -188,7 +188,7 @@ const Header = () => {
                 <li className="mb-1">
                   <a
                     className="block p-4 text-sm font-semibold text-white  hover:text-red-300 rounded"
-                    href="#"
+                    href="/#home"
                   >
                     Home
                   </a>
@@ -196,7 +196,7 @@ const Header = () => {
                 <li className="mb-1">
                   <a
                     className="block p-4 text-sm font-semibold text-white  hover:text-red-300 rounded"
-                    href="#"
+                    href="/#about"
                   >
                     About Us
                   </a>
@@ -204,7 +204,7 @@ const Header = () => {
                 <li className="mb-1">
                   <a
                     className="block p-4 text-sm font-semibold text-white  hover:text-red-300 rounded"
-                    href="#"
+                    href="#/service"
                   >
                     Services
                   </a>
@@ -212,7 +212,7 @@ const Header = () => {
                 <li className="mb-1">
                   <a
                     className="block p-4 text-sm font-semibold text-white  hover:text-red-300 rounded"
-                    href="#"
+                    href="#/price"
                   >
                     Pricing
                   </a>
@@ -220,7 +220,7 @@ const Header = () => {
                 <li className="mb-1">
                   <a
                     className="block p-4 text-sm font-semibold text-white  hover:text-red-300 rounded"
-                    href="#"
+                    href="#/contact"
                   >
                     Contact
                   </a>
@@ -230,14 +230,17 @@ const Header = () => {
             <div className="mt-auto">
               <div className="pt-6">
                 <a
-                  href="/"
+                  href="/login"
                   className="px-7 py-3 text-base font-medium  hover:text-primary text-white"
                 >
                   Login
                 </a>
                 <a
-                  href="#_"
-                  className="inline-flex items-center justify-center h-12 px-8 py-2 text-sm font-semibold text-center text-gray-200 no-underline align-middle transition-all duration-300 ease-in-out bg-transparent border-2 border-gray-600 border-solid rounded-full cursor-pointer select-none hover:text-white hover:border-white focus:shadow-xs focus:no-underline"
+                  href="/register"
+                  className="inline-flex items-center justify-center h-12 px-8 py-2  font-semibold text-center text-gray-200 no-underline align-middle transition-all duration-300 ease-in-out bg-transparent border-2 border-gray-600 border-solid rounded-full cursor-pointer select-none hover:text-white hover:border-white focus:shadow-xs focus:no-underline"
+                  style={{
+                    fontSize: "20px" /* Add other styles here if needed */,
+                  }}
                 >
                   Join Us Now
                 </a>
