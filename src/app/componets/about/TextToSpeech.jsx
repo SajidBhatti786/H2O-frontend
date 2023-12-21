@@ -5,7 +5,11 @@ const TextToSpeech = () => {
   const [text, setText] = useState("");
 
   useEffect(() => {
-    setText("Hello Testing, Text to Speech");
+    setText(`water (the chemical symbol, as used in non-scientific contexts): if you spend a leisurely ten minutes washing and rinsing, you'll be going through gallons of H20.
+
+ORIGIN
+
+from H² (sense 2 of the symbol), chemical symbol for hydrogen, +2 + O² (symbol), chemical symbol for oxygen.`);
   }, []);
 
   const speak = async () => {
@@ -13,7 +17,6 @@ const TextToSpeech = () => {
       console.log("if");
       try {
         const synth = await window.speechSynthesis;
-        let text = "Hello My name is Sajid Ali";
         const utterance = await new SpeechSynthesisUtterance(text);
 
         // Fetch the voices available on the user's system
