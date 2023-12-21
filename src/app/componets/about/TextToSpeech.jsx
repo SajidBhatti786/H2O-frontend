@@ -5,8 +5,7 @@ const TextToSpeech = () => {
   const [text, setText] = useState("");
 
   useEffect(() => {
-    setText(`water (the chemical symbol, as used in non-scientific contexts): if you spend a leisurely ten minutes washing and rinsing, you'll be going through gallons of H20.
-
+    setText(`water (the chemical symbol, as used in non-scientific contexts): 
 ORIGIN
 
 from H² (sense 2 of the symbol), chemical symbol for hydrogen, +2 + O² (symbol), chemical symbol for oxygen.`);
@@ -44,14 +43,12 @@ from H² (sense 2 of the symbol), chemical symbol for hydrogen, +2 + O² (symbol
       <div className="max-w-md px-4 md:px-8 bg-white ">
         <div className="font-serif text-lg md:text-xl text-left">
           <div className="flex items-center justify-center mt-0">
-            <div className="ml-3 md:ml-4">
-              <SpeakerIcon onClick={speak} />
+            <div className="ml-3 md:ml-4 cursor-pointer">
+              <SpeakerIcon onClick={speak} style={{ cursor: "pointer" }} />
             </div>
           </div>
           <p className="mt-2 md:mt-4">
-            Water (the chemical symbol, as used in non-scientific contexts): if
-            you spend a leisurely ten minutes washing and rinsing, you'll be
-            going through gallons of H20.
+            Water (the chemical symbol, as used in non-scientific contexts):
           </p>
           <p className="mt-2 md:mt-4">
             <b>ORIGIN</b>
