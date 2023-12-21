@@ -4,41 +4,31 @@ import Logo from "/public/assests/images/logo.png";
 import Image from "next/image";
 import styles from "../../styles/HeroSection.module.css";
 import Icon from "/public/assests/images/h-icon.png";
+import TextToSpeech from "../about/TextToSpeech";
+
 const Hero = () => {
   return (
-    <div
-      className={"w-full md:px-8 px-2 lg:h-[88vh] pb-6  bg-[white] text-black"}
-      id="home"
-    >
-      <section className="text-black body-font pt-10">
-        <div className="container mx-auto flex lg:px-5  md:flex-row flex-col items-center">
-          <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1
-              className={`${styles.title} title-font text-4xl md:text-2xl lg:text-5xl mb-4 font-bold text-black tracking-widest leading-loose`}
-            >
-              connecting people all over the world.
+    <div className="w-full md:px-8 px-4 bg-gray-100 text-black" id="home">
+      <section className="text-black body-font ">
+        <div className="container mx-auto flex lg:px-5 md:flex-row flex-col items-center">
+          <div className="lg:w-1/2 lg:pr-8 md:pr-6 flex flex-col md:items-start md:text-left md:mb-0 items-center text-center">
+            <h1 className="text-3xl md:text-5xl  font-bold text-black tracking-widest leading-loose font-serif font-times py-4 mt-3">
+              H2O (also H₂O)
             </h1>
-            <p className="mb-3  lg:inline  text-sm  leading-relaxed text-black">
-              Connect with people worldwide through our Social App, unlocking
-              the door to your heart's desire. Every connection becomes a
-              potential story waiting to unfold. Join us in the quest for
-              meaningful interactions and let the sparks fly, connecting people
-              all over the world.
-            </p>
+            <TextToSpeech />
             <div className="flex justify-center">
               <a
                 href="#_"
-                className="inline-flex items-center hover:scale-110 transition-all duration-500 bg-[white] border-solid border-2 border-black justify-center h-12 px-6 py-0 text-sm  font-semibold text-center text-black no-underline align-middle  ease-in-out   rounded-full cursor-pointer select-none  hover:border-black focus:shadow-xs focus:no-underline"
+                className="inline-flex items-center hover:scale-110 transition-all duration-500 bg-white border-solid border-2 border-black justify-center h-12 px-6 py-0 text-sm font-semibold text-center text-black no-underline align-middle ease-in-out rounded-full cursor-pointer select-none hover:border-black focus:shadow-xs focus:no-underline mt-2"
               >
                 Start Connecting Today
               </a>
             </div>
-
-            <p className={"mt-14 mb-4 hidden lg:inline text-black"}>
+            <p className=" lg:mt-4 mb-4 text-black">
               Download The App On Your <br /> SmartPhone Right Now
             </p>
-            <div className={"md:flex justify-center items-center hidden "}>
-              <div className="flex mt-3 w-48 h-14 border mr-4 hover:bg-slate-900 cursor-pointer  text-black rounded-lg items-center justify-center">
+            <div className="md:flex justify-center items-center ">
+              <div className="flex  w-48 h-14 border mr-4 hover:bg-slate-900 cursor-pointer text-black rounded-lg items-center justify-center">
                 <div className="mr-3">
                   <svg viewBox="30 336.7 120.9 129.2" width="30">
                     <path
@@ -66,8 +56,7 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="flex mt-3 w-48 h-14 border z-10 hover:bg-slate-900   cursor-pointer text-white rounded-lg items-center justify-center">
+              <div className="flex mt-3 w-48 h-14 border z-10 hover:bg-slate-900 cursor-pointer text-white rounded-lg items-center justify-center">
                 <div className="mr-3">
                   <svg viewBox="0 0 384 512" width="30">
                     <path
@@ -85,7 +74,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 bg-[white] overflow-hidden rounded-lg   transition duration-300 transform hover:-translate-y-1 hover:scale-205">
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 bg-white overflow-hidden rounded-lg transition duration-300 transform hover:-translate-y-1 hover:scale-205">
             <Image
               src={Logo}
               alt="hero"
@@ -98,4 +87,5 @@ const Hero = () => {
     </div>
   );
 };
+
 export default Hero;

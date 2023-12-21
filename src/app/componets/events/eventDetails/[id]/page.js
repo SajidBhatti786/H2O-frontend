@@ -40,7 +40,7 @@ const EventDetails = ({ params }) => {
             </p>
           </div>
           <div className="flex justify-end mt-4">
-            <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+            <button className="px-4 py-2 bg-slate-900 text-white rounded-md hover:bg-black">
               Book Now
             </button>
           </div>

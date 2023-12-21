@@ -151,103 +151,88 @@ const Header = () => {
 
       {/* Navbar Menu */}
       {isMenuOpen && (
-        <div className="navbar-menu bg-[#2a112a] relative z-50">
-          <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-          <nav className="fixed top-0 left-0 bg-[#2a112a] bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6  border-r overflow-y-auto">
-            {/* ... Menu Content ... */}
-            <div className="flex items-center mb-8">
-              <a href="/" className="block w-full py-5">
-                <span>
-                  <Image src={Logo} width={60} height={60} alt="logo" />
-                </span>
-                <span
-                  className={`absolute top-14 md:top-7 left-28 ${styles.title} font-bold text-4xl tracking-wider text-white`}
+        <div className="fixed inset-0 z-50 bg-black">
+          <div className="flex flex-direction-row items-center justify-between px-4 py-3">
+            <a href="/" className="text-white">
+              <Image src={Logo} width={60} height={60} alt="logo" />
+              <span className="ml-2 text-2xl font-bold">H2O</span>
+            </a>
+            <button className="text-white" onClick={toggleMenu}>
+              <svg
+                className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-900"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <nav className="px-4 py-6 text-white">
+            <ul>
+              <li className="mb-3">
+                <a
+                  className="block text-lg font-semibold hover:text-red-300"
+                  href="/#home"
                 >
-                  H2O
-                </span>
-              </a>
-              <button className="navbar-close" onClick={toggleMenu}>
-                <svg
-                  className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-900"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+                  Home
+                </a>
+              </li>
+              <li className="mb-3">
+                <a
+                  className="block text-lg font-semibold hover:text-red-300"
+                  href="/#about"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-            <div>
-              <ul>
-                <li className="mb-1">
-                  <a
-                    className="block p-4 text-sm font-semibold text-white  hover:text-red-300 rounded"
-                    href="/#home"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="block p-4 text-sm font-semibold text-white  hover:text-red-300 rounded"
-                    href="/#about"
-                  >
-                    About Us
-                  </a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="block p-4 text-sm font-semibold text-white  hover:text-red-300 rounded"
-                    href="#/service"
-                  >
-                    Services
-                  </a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="block p-4 text-sm font-semibold text-white  hover:text-red-300 rounded"
-                    href="#/price"
-                  >
-                    Pricing
-                  </a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="block p-4 text-sm font-semibold text-white  hover:text-red-300 rounded"
-                    href="#/contact"
-                  >
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="mt-auto">
-              <div className="pt-6">
+                  About Us
+                </a>
+              </li>
+              <li className="mb-3">
+                <a
+                  className="block text-lg font-semibold hover:text-red-300"
+                  href="#/service"
+                >
+                  Services
+                </a>
+              </li>
+              <li className="mb-3">
+                <a
+                  className="block text-lg font-semibold hover:text-red-300"
+                  href="#/price"
+                >
+                  Pricing
+                </a>
+              </li>
+              <li className="mb-3">
+                <a
+                  className="block text-lg font-semibold hover:text-red-300"
+                  href="#/contact"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+            <div className="mt-8">
+              <div className="flex flex-col items-center">
                 <a
                   href="/login"
-                  className="px-7 py-3 text-base font-medium  hover:text-primary text-white"
+                  className="text-lg font-medium hover:text-primary"
                 >
                   Login
                 </a>
                 <a
                   href="/register"
-                  className="inline-flex items-center justify-center h-12 px-8 py-2  font-semibold text-center text-gray-200 no-underline align-middle transition-all duration-300 ease-in-out bg-transparent border-2 border-gray-600 border-solid rounded-full cursor-pointer select-none hover:text-white hover:border-white focus:shadow-xs focus:no-underline"
-                  style={{
-                    fontSize: "20px" /* Add other styles here if needed */,
-                  }}
+                  className="inline-block mt-4 px-6 py-2 font-semibold text-center border-2 border-white rounded-full hover:bg-white hover:text-black"
+                  style={{ fontSize: "18px" }}
                 >
                   Join Us Now
                 </a>
               </div>
-              {/*<p className="my-4 text-xs text-center text-gray-400">*/}
-              {/*    <span>Copyright © 2021</span>*/}
-              {/*</p>*/}
             </div>
           </nav>
         </div>
