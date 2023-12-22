@@ -12,6 +12,8 @@ import profile from "/public/assests/images/rich-profile.jpg";
 import clock from "/public/assests/images/clock.png";
 import Link from "next/link";
 import TextToSpeech from "./TextToSpeech";
+import ComingSoon from "../comingSoon/page";
+
 const About = () => {
   return (
     <div className={"w-full   pt-20     bg-[black]"} id="about">
@@ -156,13 +158,15 @@ const About = () => {
               our algorithms pave the way for your perfect match.
             </p>
             <div className="flex justify-center">
-              <a
-                href="http://www.myshink.shop.com"
-                target="_blank"
-                className="inline-flex items-center hover:scale-110 transition-all duration-500 bg-[black] justify-center h-12 px-6 py-0 text-sm font-semibold text-center text-white no-underline align-middle transition-all duration-300 ease-in-out    rounded-full cursor-pointer select-none hover:text-white hover:border-white focus:shadow-xs focus:no-underline border-solid border-2 border-white text-white"
-              >
-                Connect Wholesalers & Retailers
-              </a>
+              <Link href="https://sajidbhatti786.github.io/Ecommerce-website">
+                <button
+                  // href="http://www.myshink.shop.com"
+                  // target="_blank"
+                  className="inline-flex items-center hover:scale-110 transition-all duration-500 bg-[black] justify-center h-12 px-6 py-0 text-sm font-semibold text-center text-white no-underline align-middle transition-all duration-300 ease-in-out    rounded-full cursor-pointer select-none hover:text-white hover:border-white focus:shadow-xs focus:no-underline border-solid border-2 border-white text-white"
+                >
+                  Connect Wholesalers & Retailers
+                </button>
+              </Link>
             </div>
           </div>
         </div>
