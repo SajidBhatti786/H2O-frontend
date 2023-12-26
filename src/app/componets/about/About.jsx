@@ -144,19 +144,20 @@ const About = () => {
           </div>
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center ">
             <h1
-              className={`${styles.title} title-font text-3xl lg:text-5xl mb-4 font-bold text-[white] tracking-widest md:leading-realxed`}
+              className={`${styles.title} font-times title-font text-3xl lg:text-5xl mb-4 font-bold text-[white] tracking-widest md:leading-realxed `}
+              style={{ fontFamily: "Times New Roman" }}
             >
               connecting wholesalers with retailers, to offer the best
               customer experience!
             </h1>
-            <p className="mb-8 text-sm leading-relaxed text-justify">
+            {/* <p className="mb-8 text-sm leading-relaxed text-justify">
               Experience the future of matchmaking with our Advanced Matching
               Algorithms – where every connection is a carefully curated
               masterpiece. Our cutting-edge technology ensures compatibility
               beyond surface impressions, crafting meaningful relationships with
               precision. Step into a realm where love meets innovation, and let
               our algorithms pave the way for your perfect match.
-            </p>
+            </p> */}
             <div className="flex justify-center">
               <Link href="https://sajidbhatti786.github.io/Ecommerce-website">
                 <button
