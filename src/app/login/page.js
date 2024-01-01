@@ -6,9 +6,18 @@ import { useRouter } from "next/navigation";
 import { useAuth } from "../context/AuthContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { BASE_URL } from "../../../API";
+
+console.log(BASE_URL);
 const Page = () => {
-  const { setIsLoggedIn, isLoggedIn, login, logout, setGetToken, getToken } =
-    useAuth();
+  const {
+    isLoggedIn,
+    setIsLoggedIn,
+    getToken,
+    setGetToken,
+    userData,
+    setUserData,
+  } = useAuth();
   const router = useRouter();
 
   const [username, setUsername] = useState("");
@@ -25,25 +34,24 @@ const Page = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch(
-        "https://h2-o-backend-2zkv.vercel.app/api/auth/login",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ username, password }),
-        }
-      );
+      const response = await fetch(`${BASE_URL}api/auth/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
 
       if (response.ok) {
         // Successful login
         // setError(null); // Clear any previous errors
         // console.log("Login successful", response.data);
-
+        setIsLoggedIn(true);
         const responseData = await response.json();
+        console.log(responseData);
         const token = responseData.data;
         setGetToken(token);
+        setUserData(responseData.user);
         setError(null);
         toast.success("Login Successfully", {
           position: "top-right",
@@ -55,8 +63,16 @@ const Page = () => {
           progress: undefined,
           theme: "light",
         });
-
-        router.push("/welcome");
+        localStorage.setItem("user", responseData.user);
+        localStorage.setItem("token", responseData.token);
+        if (responseData.user.role == "admin") {
+          router.push("../componets/admin/index");
+        } else if (responseData.user.role == "user") {
+          router.push("../componets/events");
+        } else {
+          router.push("/");
+        }
+        // router.push("/welcome");
       } else {
         // Handle different HTTP status codes and display meaningful error messages
         switch (response.status) {

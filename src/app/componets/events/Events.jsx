@@ -3,10 +3,21 @@ import { useState, useEffect } from "react";
 import Event from "./Event";
 import eventsData from "../../../../eventsData";
 import { SearchIcon } from "./Icons";
+import { useAuth } from "../../context/AuthContext";
+
 const EventsPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [events, setEvents] = useState([]); // State to store events
-
+  const {
+    isLoggedIn,
+    setIsLoggedIn,
+    getToken,
+    setGetToken,
+    userData,
+    setUserData,
+  } = useAuth();
+  console.log("user: ", userData);
+  console.log("token: ", getToken);
   useEffect(() => {
     const fetchData = () => {
       setEvents(eventsData);

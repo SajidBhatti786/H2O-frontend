@@ -1,13 +1,22 @@
 "use client";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [getToken, setGetToken] = useState();
+  const [userData, setUserData] = useState([]);
 
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    const userData = localStorage.getItem("user");
+    if (token) {
+      setIsLoggedIn(true);
+      setGetToken(token);
+      setUserData(userData);
+    }
+  }, []);
   const login = () => {
     // Implement your login logic here
     setIsLoggedIn(true);
@@ -19,7 +28,16 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ setIsLoggedIn, login, logout, isLoggedIn, getToken, setGetToken }}>
+    <AuthContext.Provider
+      value={{
+        isLoggedIn,
+        setIsLoggedIn,
+        getToken,
+        setGetToken,
+        userData,
+        setUserData,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );
