@@ -144,10 +144,10 @@ const About = () => {
           </div>
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center ">
             <h1
-              className={`${styles.title} font-times title-font text-3xl lg:text-5xl mb-4 font-bold text-[white] tracking-widest md:leading-realxed `}
+              className={`${styles.title} font-times title-font text-2xl lg:text-3xl mb-4 font-bold text-[white] tracking-widest md:leading-realxed `}
               style={{ fontFamily: "Times New Roman" }}
             >
-              connecting wholesalers with retailers, to offer the best
+              Connecting wholesalers with retailers, to offer the best
               customer experience!
             </h1>
             {/* <p className="mb-8 text-sm leading-relaxed text-justify">

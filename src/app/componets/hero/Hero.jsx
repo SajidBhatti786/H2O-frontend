@@ -8,14 +8,14 @@ import TextToSpeech from "../about/TextToSpeech";
 
 const Hero = () => {
   return (
-    <div className="w-full md:px-8 px-4 bg-white text-black" id="home">
-      <section className="text-black body-font ">
-        <div className="container mx-auto flex lg:px-5 md:flex-row flex-col flex-col-reverse  items-center">
+    <div className="w-full md:px-8 px-4 h-screen bg-white text-black" id="home">
+      <section className="text-black body-font w-full flex items-center justify-center h-screen">
+        <div className="container mx-auto flex lg:px-5 md:flex-row flex-col   items-center">
           <div className="lg:w-1/2 lg:pr-8 md:pr-6 flex flex-col md:items-start md:text-left md:mb-0 items-center text-center">
             <h1 className="text-3xl md:text-5xl  font-bold text-black tracking-widest leading-loose font-serif font-times py-4 mt-3">
               H•2•O
             </h1>
-            <TextToSpeech />
+            {/*<TextToSpeech />*/}
             <div className="flex justify-center">
               <a
                 href="#_"
@@ -79,7 +79,7 @@ const Hero = () => {
               src={Logo}
               alt="hero"
               width={"100%"}
-              className="mx-auto block"
+              className="float-right block"
             />
           </div>
         </div>
