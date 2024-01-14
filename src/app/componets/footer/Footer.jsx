@@ -75,6 +75,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
+
           <div>
             <Image src={Banner} width={500} height={500} alt={"banner"} />
           </div>
