@@ -16,7 +16,7 @@ export default function Calendar() {
   }, []);
 
   const saveEventsToLocalStorage = (events) => {
-    localStorage.setItem("events", JSON.stringify(events));
+    // localStorage.setItem("events", JSON.stringify(events));
   };
 
   const handleDateClick = (selected) => {
