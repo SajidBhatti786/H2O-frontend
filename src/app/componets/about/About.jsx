@@ -7,8 +7,8 @@ import CLogo from "/public/assests/images/c-logo.png";
 import linee from "/public/assests/images/line2.png";
 import Icon from "/public/assests/images/h-icon.png";
 import chat from "/public/assests/images/chat.jpg";
-import algorithms from "/public/assests/images/algorithums.jpg";
-import profile from "/public/assests/images/rich-profile.jpg";
+import shopingbage from "/public/assests/images/paperbag4.jpg";
+import jet from "/public/assests/images/jet.jpg";
 import clock from "/public/assests/images/clock.png";
 import Link from "next/link";
 import TextToSpeech from "./TextToSpeech";
@@ -139,7 +139,7 @@ const About = () => {
             <Image
               className="object-cover object-center rounded"
               alt="algorithem Pic"
-              src={algorithms}
+              src={shopingbage}
             />
           </div>
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center ">
@@ -180,21 +180,21 @@ const About = () => {
             >
               Rich Profile Customiztion
             </h1>
-            <p className="mb-8 leading-relaxed">
-              "Elevate your online presence with rich profile customization that
-              goes beyond the basics. Tailor your profile to reflect the true
-              essence of who you are, with features allowing you to showcase
-              your personality, passions, and preferences in vivid detail. Our
-              platform empowers you to stand out effortlessly, ensuring your
-              profile is a true reflection of the unique individual you are.
-              Experience the freedom to express yourself authentically,
-              attracting connections that appreciate the depth of your
-              character.
-            </p>
+            {/*<p className="mb-8 leading-relaxed">*/}
+            {/*  "Elevate your online presence with rich profile customization that*/}
+            {/*  goes beyond the basics. Tailor your profile to reflect the true*/}
+            {/*  essence of who you are, with features allowing you to showcase*/}
+            {/*  your personality, passions, and preferences in vivid detail. Our*/}
+            {/*  platform empowers you to stand out effortlessly, ensuring your*/}
+            {/*  profile is a true reflection of the unique individual you are.*/}
+            {/*  Experience the freedom to express yourself authentically,*/}
+            {/*  attracting connections that appreciate the depth of your*/}
+            {/*  character.*/}
+            {/*</p>*/}
             <div className="flex justify-center">
               <a
                 href="#_"
-                className="inline-flex items-center bg-[white] text-black justify-center  hover:scale-110 transition-all duration-500 h-12 px-6 py-0 text-sm font-semibold text-center no-underline align-middle transition-all duration-300 ease-in-out    rounded-full cursor-pointer select-none hover:text-black hover:border-black focus:shadow-xs focus:no-underline border-solid border-2 border-black"
+                className="inline-flex my-8 items-center bg-[white] text-black justify-center  hover:scale-110 transition-all duration-500 h-12 px-6 py-0 text-sm font-semibold text-center no-underline align-middle transition-all duration-300 ease-in-out    rounded-full cursor-pointer select-none hover:text-black hover:border-black focus:shadow-xs focus:no-underline border-solid border-2 border-black"
               >
                 Create Your Profile
               </a>
@@ -202,9 +202,9 @@ const About = () => {
           </div>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
             <Image
-              className="object-cover object-center rounded"
+              className="object-cover object-center rounded cursor-pointer"
               alt="rich profile"
-              src={profile}
+              src={jet}
             />
           </div>
         </div>
