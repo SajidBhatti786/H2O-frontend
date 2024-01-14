@@ -1,3 +1,4 @@
+// Import necessary libraries
 "use client";
 import { useState, useEffect } from "react";
 import FullCalendar from "@fullcalendar/react";
@@ -6,19 +7,30 @@ import interactionPlugin from "@fullcalendar/interaction";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import listPlugin from "@fullcalendar/list";
 
+// Define the Calendar component
 export default function Calendar() {
+  // State to store current events
   const [currentEvents, setCurrentEvents] = useState([]);
 
+  // useEffect to fetch events from localStorage on mount
   useEffect(() => {
-    const eventsFromLocalStorage =
-      JSON.parse(localStorage.getItem("events")) || [];
-    setCurrentEvents(eventsFromLocalStorage);
+    // Check if running on the client side before accessing localStorage
+    if (typeof window !== "undefined") {
+      const eventsFromLocalStorage =
+        JSON.parse(localStorage.getItem("events")) || [];
+      setCurrentEvents(eventsFromLocalStorage);
+    }
   }, []);
 
+  // Function to save events to localStorage
   const saveEventsToLocalStorage = (events) => {
-    // localStorage.setItem("events", JSON.stringify(events));
+    // Check if running on the client side before accessing localStorage
+    if (typeof window !== "undefined") {
+      localStorage.setItem("events", JSON.stringify(events));
+    }
   };
 
+  // Function to handle date click
   const handleDateClick = (selected) => {
     const title = prompt("Kindly Enter Event Title:");
     const calendarApi = selected.view.calendar;
@@ -41,6 +53,7 @@ export default function Calendar() {
     }
   };
 
+  // Function to handle event click
   const handleEventClick = (selected) => {
     if (
       window.confirm(
@@ -57,6 +70,7 @@ export default function Calendar() {
     }
   };
 
+  // Function to handle event drop
   const handleEventDrop = (info) => {
     const updatedEvents = currentEvents.map((event) => {
       if (event.id === info.event.id) {
@@ -73,6 +87,7 @@ export default function Calendar() {
     saveEventsToLocalStorage(updatedEvents);
   };
 
+  // Return the JSX for the Calendar component
   return (
     <div className="m-2 md:flex">
       {/* Events sidebar */}
