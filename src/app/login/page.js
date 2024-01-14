@@ -66,7 +66,7 @@ const Page = () => {
         localStorage.setItem("user", responseData.user);
         localStorage.setItem("token", responseData.token);
         if (responseData.user.role == "admin") {
-          router.push("../componets/admin/index");
+          // router.push("../componets/admin/index");
         } else if (responseData.user.role == "user") {
           router.push("../componets/events");
         } else {
