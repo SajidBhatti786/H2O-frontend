@@ -15,6 +15,7 @@ const Hero = () => {
             <h1 className="text-3xl md:text-5xl  font-bold text-black tracking-widest leading-loose font-serif font-times py-4 mt-3">
               H•2•O
             </h1>
+            //removed text to speech
             {/*<TextToSpeech />*/}
             <div className="flex justify-center">
               <a
