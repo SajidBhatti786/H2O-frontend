@@ -28,8 +28,8 @@ const Hero = () => {
             <p className=" lg:mt-4 mb-4 text-black">
               Download The App On Your <br /> SmartPhone
             </p>
-            <div className="md:flex justify-center items-center ">
-              <div className="flex  w-48 h-14 border mr-4 hover:bg-slate-900 cursor-pointer text-black rounded-lg items-center justify-center">
+            <div className="md:flex md:mx-auto lg:mx-0 justify-center items-center ">
+              <div className="flex  w-48 h-14 border lg:mr-4 hover:bg-slate-900 cursor-pointer text-black rounded-lg items-center justify-center">
                 <div className="mr-3">
                   <svg viewBox="30 336.7 120.9 129.2" width="30">
                     <path
@@ -75,7 +75,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 bg-white overflow-hidden rounded-lg transition duration-300 transform hover:-translate-y-1 hover:scale-205 flex justify-center">
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 bg-white overflow-hidden rounded-lg transition duration-300 transform hover:-translate-y-1 hover:scale-205">
             <Image
               src={Logo}
               alt="hero"
