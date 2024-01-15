@@ -12,7 +12,7 @@ const Hero = () => {
       <section className="text-black body-font w-full flex items-center justify-center h-screen">
         <div className="container mx-auto flex lg:px-5 md:flex-row flex-col-reverse   items-center">
           <div className="lg:w-1/2 lg:pr-8 md:pr-6 flex flex-col md:items-start md:text-left md:mb-0 items-center text-center">
-            <h1 className="text-3xl md:text-5xl  font-bold text-black tracking-widest leading-loose font-serif font-times py-4 mt-3">
+            <h1 className=" flex justify-center text-3xl md:text-5xl  font-bold text-black tracking-widest leading-loose font-serif font-times py-4 mt-3">
               H•2•O
             </h1>
             {/* removed text to speech */}
@@ -75,7 +75,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 bg-white overflow-hidden rounded-lg transition duration-300 transform hover:-translate-y-1 hover:scale-205">
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 bg-white overflow-hidden rounded-lg transition duration-300 transform hover:-translate-y-1 hover:scale-205 flex justify-center">
             <Image
               src={Logo}
               alt="hero"
