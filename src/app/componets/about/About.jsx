@@ -180,7 +180,7 @@ const About = () => {
             <h1
               className={`${styles.title} title-font text-3xl lg:text-5xl mb-4 font-bold text-[black] tracking-widest md:leading-realxed`}
             >
-              Awesome For This Housing And Transportation.
+              Housing And Transportation.
             </h1>
             {/*<p className="mb-8 leading-relaxed">*/}
             {/*  "Elevate your online presence with rich profile customization that*/}
