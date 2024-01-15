@@ -8,8 +8,10 @@ import linee from "/public/assests/images/line2.png";
 import Icon from "/public/assests/images/h-icon.png";
 import chat from "/public/assests/images/chat.jpg";
 import shopingbage from "/public/assests/images/paperbag4.jpg";
+import shopping_bag from "/public/assests/images/shoping_bags.jpg";
 import jet from "/public/assests/images/jet.jpg";
 import clock from "/public/assests/images/clock.png";
+import transportation from "/public/assests/images/transportation.jpg";
 import Link from "next/link";
 import TextToSpeech from "./TextToSpeech";
 import ComingSoon from "../comingSoon/page";
@@ -139,7 +141,7 @@ const About = () => {
             <Image
               className="object-cover object-center rounded"
               alt="algorithem Pic"
-              src={shopingbage}
+              src={shopping_bag}
             />
           </div>
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center ">
@@ -204,7 +206,7 @@ const About = () => {
             <Image
               className="object-cover object-center rounded cursor-pointer"
               alt="rich profile"
-              src={jet}
+              src={transportation}
             />
           </div>
         </div>
