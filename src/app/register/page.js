@@ -165,7 +165,7 @@ const Page = () => {
                     </div>
                     <input
                       type="text"
-                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-white-500"
                       placeholder="John Smith"
                       name="full_name"
                       value={formData.full_name}
@@ -188,7 +188,7 @@ const Page = () => {
                     </div>
                     <input
                       type="text"
-                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-white-500"
                       placeholder="A+"
                       name="blood_type"
                       value={formData.blood_type}
@@ -214,7 +214,7 @@ const Page = () => {
                     </div>
                     <input
                       type="text"
-                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-white-500"
                       placeholder="Taurus"
                       name="zodiac_sign"
                       value={formData.zodiac_sign}
@@ -237,7 +237,7 @@ const Page = () => {
                     </div>
                     <input
                       type="text"
-                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-white-500"
                       placeholder="eg. Male"
                       name="gender"
                       value={formData.gender}
@@ -264,7 +264,7 @@ const Page = () => {
                     </div>
                     <input
                       type="text"
-                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-white-500"
                       placeholder="Christianity"
                       name="religion"
                       value={formData.religion}
@@ -287,7 +287,7 @@ const Page = () => {
                     </div>
                     <input
                       type="text"
-                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-white-500"
                       placeholder="dd/mm/yy"
                       name="birth_date"
                       value={formData.birth_date}
@@ -313,7 +313,7 @@ const Page = () => {
                     </div>
                     <input
                       type="email"
-                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-white-500"
                       placeholder="johnsmith@example.com"
                       name="email"
                       value={formData.email}
@@ -338,7 +338,7 @@ const Page = () => {
                     </div>
                     <input
                       type="password"
-                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-white-500"
                       placeholder="************"
                       name="password"
                       value={formData.password}
