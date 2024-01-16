@@ -15,6 +15,7 @@ import transportation from "/public/assests/images/transportation.jpg";
 import Link from "next/link";
 import TextToSpeech from "./TextToSpeech";
 import ComingSoon from "../comingSoon/page";
+import UnderConstruction from "../underconstruction/page";
 
 const About = () => {
   return (
@@ -194,12 +195,12 @@ const About = () => {
             {/*  character.*/}
             {/*</p>*/}
             <div className="flex justify-center">
-              <a
-                href="#_"
+              <Link
+                href="/componets/underconstruction"
                 className="inline-flex my-8 items-center bg-[white] text-black justify-center  hover:scale-110 transition-all duration-500 h-12 px-6 py-0 text-sm font-semibold text-center no-underline align-middle transition-all duration-300 ease-in-out    rounded-full cursor-pointer select-none hover:text-black hover:border-black focus:shadow-xs focus:no-underline border-solid border-2 border-black"
               >
                 Create Your Profile
-              </a>
+              </Link>
             </div>
           </div>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">

@@ -142,7 +142,7 @@ const Page = () => {
         style={{ maxWidth: 1000 }}
       >
         <div className="md:flex w-full">
-          <div className="hidden md:flex iteams-center justify-center  w-1/2 bg-gray-700 py-10 px-10">
+          <div className="hidden md:flex items-center justify-center  w-1/2 bg-gray-700 py-10 px-10">
             <Image src={img} alt={"Pic"} />
           </div>
           <div className="w-full md:w-1/2 py-10 px-5 md:px-10 bg-gray-700">
