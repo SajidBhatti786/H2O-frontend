@@ -5,6 +5,17 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Icon from "@mdi/react";
+import {
+  mdiAccount,
+  mdiWater,
+  mdiZodiacLibra,
+  mdiGenderFemale,
+  mdiCross,
+  mdiCalendarRange,
+  mdiEmailOutline,
+  mdiLock,
+} from "@mdi/js";
 const Page = () => {
   const router = useRouter();
 
@@ -22,7 +33,41 @@ const Page = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+
+    // Check if the change is coming from the "birth_date" field
+    if (name === "birth_date") {
+      // Remove non-digit characters from the value
+      const numericValue = value.replace(/\D/g, "");
+
+      // Check if the value is not empty
+      if (numericValue.length > 0) {
+        // Format the date with slashes based on expected format (dd/mm/yyyy)
+        const formattedDate = [
+          numericValue.slice(0, 2),
+          numericValue.slice(2, 4),
+          numericValue.slice(4, 8),
+        ]
+          .filter(Boolean)
+          .join("/");
+
+        setFormData({
+          ...formData,
+          [name]: formattedDate,
+        });
+      } else {
+        // If the value is empty, update the state with an empty string
+        setFormData({
+          ...formData,
+          [name]: "",
+        });
+      }
+    } else {
+      // If the change is not from the "birth_date" field, update the state normally
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -83,20 +128,20 @@ const Page = () => {
   return (
     <div className="min-w-screen min-h-screen  bg-[white] flex items-center justify-center px-5 py-5">
       <div
-        className="bg-gray-700  text-white rounded-3xl shadow-xl w-full overflow-hidden"
+        className="bg-black  text-white rounded-3xl shadow-xl w-full overflow-hidden"
         style={{ maxWidth: 1000 }}
       >
         <div className="md:flex w-full">
           <div
-            className="hidden md:block w-1/2 bg-gray-700 py-10 px-10"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
+            className="hidden  lg:block lg:flex lg:justify-center  w-1/2 bg-black py-10 px-10"
+            // style={{
+            //   display: "flex",
+            //   flexDirection: "column",
+            //   alignItems: "center",
+            //   justifyContent: "center",
+            // }}
           >
-            <Image src={img} alt={"Pic"} />
+            <Image src={img} width={500} height={500} alt={"Pic"} />
           </div>
           <div className="w-full md:w-1/2 py-10 px-5 md:px-10">
             <div className="text-center mb-10 text-white">
@@ -111,7 +156,12 @@ const Page = () => {
                   </label>
                   <div className="flex">
                     <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-                      <i className="mdi mdi-account-outline text-gray-400 text-lg" />
+                      <Icon
+                        path={mdiAccount}
+                        title="User Profile"
+                        size={1}
+                        color="black"
+                      />
                     </div>
                     <input
                       type="text"
@@ -125,11 +175,16 @@ const Page = () => {
                 </div>
                 <div className="w-1/2 px-3 mb-5">
                   <label htmlFor="" className="text-xs font-semibold px-1">
-                    Contact Number
+                    Blood Type
                   </label>
                   <div className="flex">
                     <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-                      <i className="mdi mdi-account-outline text-gray-400 text-lg" />
+                      <Icon
+                        path={mdiWater}
+                        title="User Profile"
+                        size={1}
+                        color="black"
+                      />
                     </div>
                     <input
                       type="text"
@@ -150,7 +205,12 @@ const Page = () => {
                   </label>
                   <div className="flex">
                     <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-                      <i className="mdi mdi-account-outline text-gray-400 text-lg" />
+                      <Icon
+                        path={mdiZodiacLibra}
+                        title="User Profile"
+                        size={1}
+                        color="black"
+                      />
                     </div>
                     <input
                       type="text"
@@ -168,7 +228,12 @@ const Page = () => {
                   </label>
                   <div className="flex">
                     <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-                      <i className="mdi mdi-account-outline text-gray-400 text-lg" />
+                      <Icon
+                        path={mdiGenderFemale}
+                        title="User Profile"
+                        size={1}
+                        color="black"
+                      />
                     </div>
                     <input
                       type="text"
@@ -190,7 +255,12 @@ const Page = () => {
                   </label>
                   <div className="flex">
                     <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-                      <i className="mdi mdi-account-outline text-gray-400 text-lg" />
+                      <Icon
+                        path={mdiCross}
+                        title="User Profile"
+                        size={1}
+                        color="black"
+                      />
                     </div>
                     <input
                       type="text"
@@ -208,7 +278,12 @@ const Page = () => {
                   </label>
                   <div className="flex">
                     <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-                      <i className="mdi mdi-account-outline text-gray-400 text-lg" />
+                      <Icon
+                        path={mdiCalendarRange}
+                        title="User Profile"
+                        size={1}
+                        color="black"
+                      />
                     </div>
                     <input
                       type="text"
@@ -229,7 +304,12 @@ const Page = () => {
                   </label>
                   <div className="flex">
                     <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-                      <i className="mdi mdi-email-outline text-gray-400 text-lg" />
+                      <Icon
+                        path={mdiEmailOutline}
+                        title="User Profile"
+                        size={1}
+                        color="black"
+                      />
                     </div>
                     <input
                       type="email"
@@ -249,7 +329,12 @@ const Page = () => {
                   </label>
                   <div className="flex">
                     <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-                      <i className="mdi mdi-lock-outline text-gray-400 text-lg" />
+                      <Icon
+                        path={mdiLock}
+                        title="User Profile"
+                        size={1}
+                        color="black"
+                      />
                     </div>
                     <input
                       type="password"
@@ -262,53 +347,14 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex -mx-3">
-                <div className="w-full px-3 mb-5">
-                  <label htmlFor="" className="text-xs font-semibold px-1">
-                    Do you want to create events.
-                  </label>
-                  <div className="flex">
-                    <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-                      <i className="mdi mdi-email-outline text-gray-400 text-lg" />
-                    </div>
-                    <input
-                      type="email"
-                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
-                      placeholder="johnsmith@example.com"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="flex -mx-3">
-                <div className="w-full px-3 mb-12">
-                  <label htmlFor="" className="text-xs font-semibold px-1">
-                    Password
-                  </label>
-                  <div className="flex">
-                    <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-                      <i className="mdi mdi-lock-outline text-gray-400 text-lg" />
-                    </div>
-                    <input
-                      type="password"
-                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
-                      placeholder="************"
-                      name="password"
-                      value={formData.password}
-                      onChange={handleChange}
-                    />
-                  </div>
-                </div>
-              </div>
+
               <div className="flex -mx-3">
                 <div className="w-full px-3 mb-5">
                   <button
                     onClick={handleSubmit}
-                    className="block w-full max-w-xs mx-auto bg-[black] hover:scale-110 transition-all duration-500  text-white rounded-full px-3 py-3 font-semibold"
+                    className="block w-full max-w-xs mx-auto bg-[white] hover:scale-110 transition-all duration-500  text-black rounded-full px-3 py-3 font-semibold"
                   >
-                    REGISTER NOW
+                    Login
                   </button>
                 </div>
               </div>

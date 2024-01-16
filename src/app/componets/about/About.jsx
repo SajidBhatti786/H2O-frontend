@@ -212,7 +212,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="text-gray-600 body-font lg:py-8">
+      {/* <section className="text-gray-600 body-font lg:py-8">
         <div className="container mx-auto flex lg:px-5 px-2 py-2  md:flex-row flex-col items-center">
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
             <Image
@@ -245,7 +245,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

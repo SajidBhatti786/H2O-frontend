@@ -27,11 +27,11 @@ export default function Home() {
 
   return (
     <>
-        <Header/>
+      <Header />
       <Hero />
       <About />
-      <Connection />
-      <Pricing />
+      {/* <Connection /> */}
+      {/* <Pricing /> */}
       <Footer />
     </>
   );
