@@ -114,7 +114,7 @@ const Footer = () => {
                 alt={"banner"}
               />
             </div>
-            <div className={"flex  items-center justify-left"}>
+            <div className={"flex  items-center justify-center"}>
               <div className="flex mt-3 w-48 h-14 border mr-4 bg-black hover:bg-slate-600 cursor-pointer  text-white rounded-lg items-center justify-center">
                 <div className="mr-3">
                   <svg viewBox="30 336.7 120.9 129.2" width="30">
@@ -189,7 +189,7 @@ const Footer = () => {
             © Copyright 2023. All Rights Reserved.
           </p>
 
-          <div className="flex -mx-2">
+          <div className="flex  -mx-2">
             <a
               href="#"
               className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
