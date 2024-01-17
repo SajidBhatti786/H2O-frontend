@@ -14,7 +14,7 @@ const Footer = () => {
         >
           <div className={" lg:w-2/4 w-full  "}>
             <h1
-              className={`${styles.title} flex justify-center items-center title-font text-3xl lg:text-5xl mb-4 font-bold text-[white] tracking-widest md:leading-realxed`}
+              className={`${styles.title} flex justify-center items-center title-font text-3xl lg:text-5xl  font-bold text-[white] tracking-widest md:leading-realxed p-4`}
             >
               Aviation
             </h1>
@@ -76,7 +76,7 @@ const Footer = () => {
             </div> */}
           </div>
 
-          <div className="bg-white m-6">
+          <div className="bg-white mt-0 mr-6 ml-6 mb-6">
             <img
               src="https://images.emojiterra.com/google/noto-emoji/unicode-15/bw/512px/1f681.png"
               width={500}
@@ -94,7 +94,7 @@ const Footer = () => {
         >
           <div className={" lg:w-2/4 w-full  "}>
             <h1
-              className={`${styles.title} flex justify-center items-center title-font text-3xl lg:text-5xl mb-4 font-bold text-[black] tracking-widest md:leading-realxed`}
+              className={`${styles.title} flex justify-center items-center title-font text-3xl lg:text-5xl mb-4 font-bold text-[black] tracking-widest md:leading-realxed pt-4`}
             >
               Arts
             </h1>
