@@ -7,7 +7,8 @@ import { useAuth } from "../context/AuthContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { BASE_URL } from "../../../API";
-
+import Icon from "@mdi/react";
+import { mdiAccount, mdiLock } from "@mdi/js";
 console.log(BASE_URL);
 const Page = () => {
   const {
@@ -65,13 +66,9 @@ const Page = () => {
         });
         localStorage.setItem("user", responseData.user);
         localStorage.setItem("token", responseData.token);
-        if (responseData.user.role == "admin") {
-          // router.push("../componets/admin/index");
-        } else if (responseData.user.role == "user") {
-          router.push("../componets/events");
-        } else {
-          router.push("/");
-        }
+
+        router.push("../componets/events");
+
         // router.push("/welcome");
       } else {
         // Handle different HTTP status codes and display meaningful error messages
@@ -138,14 +135,14 @@ const Page = () => {
   return (
     <div className="min-w-screen min-h-screen  bg-[white] flex items-center justify-center px-5 py-5">
       <div
-        className="bg-gray-700 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden text-white"
+        className="bg-black  rounded-3xl shadow-xl w-full overflow-hidden text-white"
         style={{ maxWidth: 1000 }}
       >
         <div className="md:flex w-full">
-          <div className="hidden md:flex items-center justify-center  w-1/2 bg-gray-700 py-10 px-10">
+          <div className="hidden md:flex items-center justify-center  w-1/2 bg-black py-10 px-10">
             <Image src={img} alt={"Pic"} />
           </div>
-          <div className="w-full md:w-1/2 py-10 px-5 md:px-10 bg-gray-700">
+          <div className="w-full md:w-1/2 py-10 px-5 md:px-10 bg-black">
             <div className="text-center mb-10">
               <h1 className="font-bold text-3xl text-white">LOGIN</h1>
               <p className="text-white">Enter your information to Login</p>
@@ -158,7 +155,12 @@ const Page = () => {
                   </label>
                   <div className="flex">
                     <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-                      <i className="mdi mdi-email-outline text-gray-400 text-lg" />
+                      <Icon
+                        path={mdiAccount}
+                        title="User Profile"
+                        size={1}
+                        color="black"
+                      />
                     </div>
                     <input
                       type="email"
@@ -178,7 +180,12 @@ const Page = () => {
                   </label>
                   <div className="flex">
                     <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-                      <i className="mdi mdi-lock-outline text-gray-400 text-lg" />
+                      <Icon
+                        path={mdiLock}
+                        title="User Profile"
+                        size={1}
+                        color="black"
+                      />
                     </div>
                     <input
                       type="password"
@@ -195,7 +202,7 @@ const Page = () => {
                 <div className="w-full px-3 mb-5">
                   <button
                     onClick={handleLogin}
-                    className="block w-full max-w-xs mx-auto bg-[black] hover:scale-110 transition-all duration-500  text-white rounded-full px-3 py-3 font-semibold"
+                    className="block w-full max-w-xs mx-auto bg-[white] hover:scale-110 transition-all duration-500  text-black rounded-full px-3 py-3 font-semibold"
                   >
                     Login
                   </button>

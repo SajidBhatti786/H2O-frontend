@@ -9,12 +9,12 @@ const Footer = () => {
       <footer className="bg-black">
         <div
           className={
-            "w-full bg-[white]  md:flex lg:flex md:flex-row lg:flex-row flex-col justify-between items-center lg:px-12 lg:py-6 "
+            "w-full bg-[black]  md:flex lg:flex md:flex-row lg:flex-row flex-col justify-between items-center lg:px-12 lg:py-6 "
           }
         >
           <div className={" lg:w-2/4 w-full  "}>
             <h1
-              className={`${styles.title} flex justify-center items-center title-font text-3xl lg:text-5xl mb-4 font-bold text-[black] tracking-widest md:leading-realxed`}
+              className={`${styles.title} flex justify-center items-center title-font text-3xl lg:text-5xl mb-4 font-bold text-[white] tracking-widest md:leading-realxed`}
             >
               Aviation
             </h1>
@@ -27,7 +27,7 @@ const Footer = () => {
               Your extraordinary love story begins here!
             </p> */}
 
-            <div className={"flex  items-center justify-left"}>
+            {/* <div className={"flex  items-center justify-left"}>
               <div className="flex mt-3 w-48 h-14 border mr-4 bg-black hover:bg-slate-600 cursor-pointer  text-white rounded-lg items-center justify-center">
                 <div className="mr-3">
                   <svg viewBox="30 336.7 120.9 129.2" width="30">
@@ -73,10 +73,10 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
-          <div>
+          <div className="bg-white m-6">
             <img
               src="https://images.emojiterra.com/google/noto-emoji/unicode-15/bw/512px/1f681.png"
               width={500}
@@ -106,7 +106,14 @@ const Footer = () => {
               world where connections flourish, and your perfect match awaits.
               Your extraordinary love story begins here!
             </p> */}
-
+            <div className="lg:hidden  ">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdtLsa07fjkjuhUDYjq9Ss_swXPnZT-3rSQQ&usqp=CAU"
+                width={500}
+                height={500}
+                alt={"banner"}
+              />
+            </div>
             <div className={"flex  items-center justify-left"}>
               <div className="flex mt-3 w-48 h-14 border mr-4 bg-black hover:bg-slate-600 cursor-pointer  text-white rounded-lg items-center justify-center">
                 <div className="mr-3">
@@ -156,7 +163,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className="hidden lg:block">
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdtLsa07fjkjuhUDYjq9Ss_swXPnZT-3rSQQ&usqp=CAU"
               width={500}
