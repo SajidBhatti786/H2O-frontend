@@ -249,7 +249,7 @@ const Page = () => {
                     <input
                       type="text"
                       className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-white-500"
-                      placeholder="A+"
+                      placeholder="A"
                       name="blood_type"
                       value={formData.blood_type}
                       onChange={handleChange}
