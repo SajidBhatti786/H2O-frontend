@@ -23,6 +23,7 @@ const Page = () => {
     full_name: "",
     gender: "",
     blood_type: "",
+    rh_factor: "",
     religion: "",
     zodiac_sign: "",
     birth_date: "",
@@ -73,19 +74,26 @@ const Page = () => {
   const handleSubmit = async (e) => {
     console.log(formData);
     e.preventDefault();
-
+    var response;
+    let blood = formData.blood_type + formData.rh_factor;
     try {
-      const response = await fetch(
-        "https://h2-o-backend-2zkv.vercel.app/api/auth/register",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
-
+      response = await fetch("http://localhost:5000/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          full_name: formData.full_name,
+          gender: formData.gender,
+          blood_type: blood,
+          religion: formData.religion,
+          zodiac_sign: formData.zodiac_sign,
+          birth_date: formData.birth_date,
+          email: formData.email,
+          password: formData.password,
+        }),
+      });
+      console.log(response);
       if (!response.ok) {
         const errorData = await response.json();
         if (errorData.status === 400) {
@@ -149,7 +157,7 @@ const Page = () => {
               <p>Enter your information to register</p>
             </div>
             <div>
-              <div className="flex -mx-3">
+              {/* <div className="flex -mx-3">
                 <div className="w-1/2 px-3 mb-5">
                   <label htmlFor="" className="text-xs font-semibold px-1">
                     Full name
@@ -192,6 +200,81 @@ const Page = () => {
                       placeholder="A+"
                       name="blood_type"
                       value={formData.blood_type}
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+              </div> */}
+              <div className="flex -mx-3">
+                <div className="w-full px-3 mb-5">
+                  <label htmlFor="" className="text-xs font-semibold px-1">
+                    Full Name
+                  </label>
+                  <div className="flex">
+                    <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
+                      <Icon
+                        path={mdiAccount}
+                        title="User Profile"
+                        size={1}
+                        color="black"
+                      />
+                    </div>
+                    <input
+                      type="text"
+                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-white-500"
+                      placeholder="John Smith"
+                      name="full_name"
+                      value={formData.full_name}
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* writting blood type and rh type seperately */}
+              <div className="flex -mx-3">
+                <div className="w-1/2 px-3 mb-5">
+                  <label htmlFor="" className="text-xs font-semibold px-1">
+                    Blood Type
+                  </label>
+                  <div className="flex">
+                    <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
+                      <Icon
+                        path={mdiWater}
+                        title="User Profile"
+                        size={1}
+                        color="black"
+                      />
+                    </div>
+                    <input
+                      type="text"
+                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-white-500"
+                      placeholder="A+"
+                      name="blood_type"
+                      value={formData.blood_type}
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="w-1/2 px-3 mb-5">
+                  <label htmlFor="" className="text-xs font-semibold px-1">
+                    Rh Factor
+                  </label>
+                  <div className="flex">
+                    <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
+                      <Icon
+                        path={mdiWater}
+                        title="User Profile"
+                        size={1}
+                        color="black"
+                      />
+                    </div>
+                    <input
+                      type="text"
+                      className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-white-500"
+                      placeholder="+"
+                      name="rh_factor"
+                      value={formData.rh_factor}
                       onChange={handleChange}
                     />
                   </div>
