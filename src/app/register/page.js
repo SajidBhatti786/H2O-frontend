@@ -15,12 +15,14 @@ import {
   mdiCalendarRange,
   mdiEmailOutline,
   mdiLock,
+  mdiPhone,
 } from "@mdi/js";
 const Page = () => {
   const router = useRouter();
 
   const [formData, setFormData] = useState({
     full_name: "",
+    phone_number: "",
     gender: "",
     blood_type: "",
     rh_factor: "",
@@ -157,7 +159,8 @@ const Page = () => {
               <p>Enter your information to register</p>
             </div>
             <div>
-              {/* <div className="flex -mx-3">
+              {/* commented the factors */}
+              <div className="flex -mx-3">
                 <div className="w-1/2 px-3 mb-5">
                   <label htmlFor="" className="text-xs font-semibold px-1">
                     Full name
@@ -183,13 +186,13 @@ const Page = () => {
                 </div>
                 <div className="w-1/2 px-3 mb-5">
                   <label htmlFor="" className="text-xs font-semibold px-1">
-                    Blood Type
+                    Phone Number
                   </label>
                   <div className="flex">
                     <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
                       <Icon
-                        path={mdiWater}
-                        title="User Profile"
+                        path={mdiPhone}
+                        title="Phone number"
                         size={1}
                         color="black"
                       />
@@ -197,15 +200,15 @@ const Page = () => {
                     <input
                       type="text"
                       className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-white-500"
-                      placeholder="A+"
-                      name="blood_type"
-                      value={formData.blood_type}
+                      placeholder=""
+                      name="phone_number"
+                      value={formData.phone_number}
                       onChange={handleChange}
                     />
                   </div>
                 </div>
-              </div> */}
-              <div className="flex -mx-3">
+              </div>
+              {/* <div className="flex -mx-3">
                 <div className="w-full px-3 mb-5">
                   <label htmlFor="" className="text-xs font-semibold px-1">
                     Full Name
@@ -229,7 +232,7 @@ const Page = () => {
                     />
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* writting blood type and rh type seperately */}
               <div className="flex -mx-3">
