@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Icon from "@mdi/react";
+import { BASE_URL } from "../../../API";
 import {
   mdiAccount,
   mdiWater,
@@ -78,14 +79,16 @@ const Page = () => {
     e.preventDefault();
     var response;
     let blood = formData.blood_type + formData.rh_factor;
+    console.log(formData.phone_number.replace(/\s/g, ""));
     try {
-      response = await fetch("http://localhost:5000/api/auth/register", {
+      response = await fetch(`${BASE_URL}api/auth/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
           full_name: formData.full_name,
+          phone_number: formData.phone_number,
           gender: formData.gender,
           blood_type: blood,
           religion: formData.religion,
@@ -98,12 +101,18 @@ const Page = () => {
       console.log(response);
       if (!response.ok) {
         const errorData = await response.json();
+
         if (errorData.status === 400) {
           // Handle specific error cases
           if (errorData.message === "User already exists") {
             toast.error("User with this email already exists");
           } else if (errorData.message === "Username already exists") {
             toast.error("Username already exists");
+          } else if (
+            errorData.message ===
+            "Invalid phone number. Must be in Internation format"
+          ) {
+            toast.error("Invalid phone number. Must be In Internation format");
           } else {
             // Handle other specific error cases if needed
             toast.error("Failed to register user");
@@ -143,7 +152,7 @@ const Page = () => {
       >
         <div className="md:flex w-full">
           <div
-            className="hidden  lg:block lg:flex lg:justify-center  w-1/2 bg-black py-10 px-10"
+            className="hidden  lg:block lg:flex lg:justify-center lg:items-center  w-1/2 bg-black py-10 px-10"
             // style={{
             //   display: "flex",
             //   flexDirection: "column",
@@ -151,7 +160,7 @@ const Page = () => {
             //   justifyContent: "center",
             // }}
           >
-            <Image src={img} width={500} height={500} alt={"Pic"} />
+            <Image src={img} alt={"Pic"} style={{ borderRadius: "5px" }} />
           </div>
           <div className="w-full md:w-1/2 py-10 px-5 md:px-10">
             <div className="text-center mb-10 text-white">
@@ -200,7 +209,7 @@ const Page = () => {
                     <input
                       type="text"
                       className="w-full text-black -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-white-500"
-                      placeholder=""
+                      placeholder="923073501744"
                       name="phone_number"
                       value={formData.phone_number}
                       onChange={handleChange}
