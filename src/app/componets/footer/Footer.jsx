@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-black">
-        <div
+        {/*<div
           className={
             "w-full bg-[black]  md:flex lg:flex md:flex-row lg:flex-row flex-col justify-between items-center lg:px-12 lg:py-6 "
           }
@@ -18,14 +18,14 @@ const Footer = () => {
             >
               Aviation
             </h1>
-            {/* <p className="mb-3  leading-relaxed text-black">
+            <p className="mb-3  leading-relaxed text-black">
               Embark on a transformative journey to discover your best match
               today! With our cutting-edge features, expertly crafted
               algorithms, and a vibrant community of like-minded individuals,
               finding love has never been more accessible. Join us and unlock a
               world where connections flourish, and your perfect match awaits.
               Your extraordinary love story begins here!
-            </p> */}
+            </p> 
 
             {/* <div className={"flex  items-center justify-left"}>
               <div className="flex mt-3 w-48 h-14 border mr-4 bg-black hover:bg-slate-600 cursor-pointer  text-white rounded-lg items-center justify-center">
@@ -73,7 +73,7 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
 
           <div className="bg-white mt-0 mr-6 ml-6 mb-6">
@@ -87,7 +87,8 @@ const Footer = () => {
         </div>
 
         {/* New added arts area */}
-        <div
+
+        {/* <div
           className={
             "w-full bg-[white]  md:flex lg:flex md:flex-row lg:flex-row flex-col justify-between items-center lg:px-12 lg:py-6 "
           }
@@ -98,14 +99,14 @@ const Footer = () => {
             >
               Arts
             </h1>
-            {/* <p className="mb-3  leading-relaxed text-black">
+            <p className="mb-3  leading-relaxed text-black">
               Embark on a transformative journey to discover your best match
               today! With our cutting-edge features, expertly crafted
               algorithms, and a vibrant community of like-minded individuals,
               finding love has never been more accessible. Join us and unlock a
               world where connections flourish, and your perfect match awaits.
               Your extraordinary love story begins here!
-            </p> */}
+            </p> 
             <div className="lg:hidden  ">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdtLsa07fjkjuhUDYjq9Ss_swXPnZT-3rSQQ&usqp=CAU"
@@ -171,7 +172,7 @@ const Footer = () => {
               alt={"banner"}
             />
           </div>
-        </div>
+        </div> */}
 
         <div className=" container w-full bg-black flex flex-col items-center justify-between  py-4 px-8 mt-4  sm:space-y-0 sm:flex-row">
           <a href="/" className=" flex items-center  ">
