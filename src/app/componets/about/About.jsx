@@ -22,11 +22,11 @@ const About = () => {
     <div className={"w-full   pt-20     bg-[black]"} id="about">
       <section className="text-[#2a112a] lg:px-8 lg:py-8 bg-white body-font pt-1">
         <div className="lg:flex-grow md:w-full  flex flex-col mb-10 md:items-center md:text-center   items-center text-center">
-          <h4
+          {/* <h4
             className={`text-sm md:text-xl lg:text-xl font-bold text-black-600`}
           >
             About Us
-          </h4>
+          </h4> */}
           <h1
             className={`${styles.title} title-font text-3xl lg:text-5xl mb-4 font-bold text-[black] `}
             style={{ lineHeight: "1.4", letterSpacing: "1.2px" }}
