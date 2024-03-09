@@ -31,7 +31,7 @@ const About = () => {
             className={`${styles.title} title-font text-3xl lg:text-5xl mb-4 font-bold text-[black] `}
             style={{ lineHeight: "1.4", letterSpacing: "1.2px" }}
           >
-            connect with the best
+            EVENTS
           </h1>
 
           <div className="flex justify-center">
