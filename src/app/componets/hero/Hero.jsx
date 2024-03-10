@@ -5,7 +5,7 @@ import Image from "next/image";
 import styles from "../../styles/HeroSection.module.css";
 import Icon from "/public/assests/images/h-icon.png";
 import TextToSpeech from "../about/TextToSpeech";
-
+import Link from "next/link";
 const Hero = () => {
   return (
     <div className="w-full md:px-8 px-4 h-screen bg-white text-black" id="home">
@@ -76,12 +76,14 @@ const Hero = () => {
             </div>
           </div>
           <div className="lg:max-w-lg lg:w-full flex items-center justify-center md:w-1/2 w-5/6 bg-white overflow-hidden rounded-lg transition duration-300 transform hover:-translate-y-1 hover:scale-205">
+          <Link href="/componets/events">
             <Image
               src={Logo}
               alt="hero"
               width={"100%"}
               // className="float-right block"
             />
+            </Link>
           </div>
         </div>
       </section>
