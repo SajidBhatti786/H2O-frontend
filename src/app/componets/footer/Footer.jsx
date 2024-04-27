@@ -3,7 +3,9 @@ import styles from "../../styles/HeroSection.module.css";
 import Banner from "/public/assests/images/banner.png";
 import Image from "next/image";
 import Logo from "/public/assests/images/logo.png";
+import Link from "next/link";
 const Footer = () => {
+
   return (
     <>
       <footer className="bg-black">
@@ -190,6 +192,11 @@ const Footer = () => {
             © Copyright 2023. All Rights Reserved.
           </p>
 
+        
+          <a href={"/privacyPolicy"} className={" underline text-white"}>
+                  Privacy Policy
+            </a>
+        
           <div className="flex  -mx-2">
             <a
               href="#"
