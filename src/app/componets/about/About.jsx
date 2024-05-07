@@ -35,7 +35,7 @@ const About = () => {
           </h1>
 
           <div className="flex justify-center">
-            <Link href="/componets/events">
+            <Link href="https://h2o-events-frontend.vercel.app">
               <button className="inline-flex items-center hover:scale-110 transition-all duration-500 bg-[white] justify-center h-12 px-6 py-6 text-sm font-semibold text-center no-underline align-middle transition-all duration-300 ease-in-out rounded-full cursor-pointer select-none hover:text-black hover:border-black text-black border-solid border-2 border-black focus:shadow-xs focus:no-underline">
                 Open Event Page
               </button>
