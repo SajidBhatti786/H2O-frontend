@@ -5,8 +5,8 @@ const inter = Inter({ subsets: ["latin"] });
 import Header from "./componets/header/Header";
 
 export const metadata = {
-  title: "Dating App ",
-  description: "Dating App",
+  title: "H2O - Web Page ",
+  description: "H2O - Web Page",
 };
 
 export default function RootLayout({ children }) {
